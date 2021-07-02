@@ -32,29 +32,15 @@ Note: If you already have your own personal Google Cloud account or project, do 
 
 Note: If you are using a Pixelbook, open an Incognito window to run this lab.
 
-How to start your lab and sign in to the Google Cloud Console
+How to start your lab and sign in to the AWS EKS/Google Cloud Console
 Click the Start Lab button. If you need to pay for the lab, a pop-up opens for you to select your payment method. On the left is a panel populated with the temporary credentials that you must use for this lab.
 
-Open Google Console
 
-Copy the username, and then click Open Google Console. The lab spins up resources, and then opens another tab that shows the Sign in page.
+For AWS: - Connect to your EKS from AWS cli and connect to EKS cluster:- 
+https://aws.amazon.com/premiumsupport/knowledge-center/eks-cluster-connection/
 
-Sign in
 
-Tip: Open the tabs in separate windows, side-by-side.
-
-If you see the Choose an account page, click Use Another Account. Choose an account
-In the Sign in page, paste the username that you copied from the Connection Details panel. Then copy and paste the password.
-
-Important: You must use the credentials from the Connection Details panel. Do not use your Qwiklabs credentials. If you have your own Google Cloud account, do not use it for this lab (avoids incurring charges).
-
-Click through the subsequent pages:
-
-Accept the terms and conditions.
-Do not add recovery options or two-factor authentication (because this is a temporary account).
-Do not sign up for free trials.
-After a few moments, the Cloud Console opens in this tab.
-
+for GKE
 Note: You can view the menu with a list of Google Cloud Products and Services by clicking the Navigation menu at the top-left. Cloud Console Menu
 Activate Cloud Shell
 Cloud Shell is a virtual machine that is loaded with development tools. It offers a persistent 5GB home directory and runs on the Google Cloud. Cloud Shell provides command-line access to your Google Cloud resources.
@@ -94,7 +80,7 @@ project = <project_ID>
 (Example output)
 
 [core]
-project = qwiklabs-gcp-44776a13dea667a6
+project = <project ID>
 For full documentation of gcloud see the gcloud command-line tool overview.
 Google Kubernetes Engine
 In the cloud shell environment type the following command to set the zone:
@@ -104,6 +90,14 @@ After you set the zone, start up a cluster for use in this lab:
 
 gcloud container clusters create io
 Note: It will take a while to create a cluster - Kubernetes Engine is provisioning a few Virtual Machines behind the scenes for you to play with!
+
+
+
+
+
+
+Once you are connected to your EKS or GKE the follow below steps:- 
+
 
 Get the sample code
 Clone the GitHub repository from the Cloud Shell command line:
